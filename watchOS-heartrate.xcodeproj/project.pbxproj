@@ -15,6 +15,7 @@
 		E3782EF62465AA5B00F0D996 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3782EF52465AA5B00F0D996 /* ExtensionDelegate.swift */; };
 		E3782EF82465AA5B00F0D996 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3782EF72465AA5B00F0D996 /* NotificationController.swift */; };
 		E3782EFA2465AA5B00F0D996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3782EF92465AA5B00F0D996 /* Assets.xcassets */; };
+		E3782F0D2465AD5900F0D996 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3782F0C2465AD5900F0D996 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		E3782EF92465AA5B00F0D996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3782EFB2465AA5B00F0D996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3782EFC2465AA5B00F0D996 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E3782F0A2465AD5900F0D996 /* watchOS-heartrate WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watchOS-heartrate WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E3782F0C2465AD5900F0D996 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3782F0D2465AD5900F0D996 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				E3782EE32465AA5A00F0D996 /* watchOS-heartrate WatchKit App */,
 				E3782EF22465AA5B00F0D996 /* watchOS-heartrate WatchKit Extension */,
 				E3782EDC2465AA5A00F0D996 /* Products */,
+				E3782F0B2465AD5900F0D996 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +122,7 @@
 		E3782EF22465AA5B00F0D996 /* watchOS-heartrate WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E3782F0A2465AD5900F0D996 /* watchOS-heartrate WatchKit Extension.entitlements */,
 				E3782EF32465AA5B00F0D996 /* InterfaceController.swift */,
 				E3782EF52465AA5B00F0D996 /* ExtensionDelegate.swift */,
 				E3782EF72465AA5B00F0D996 /* NotificationController.swift */,
@@ -125,6 +131,14 @@
 				E3782EFC2465AA5B00F0D996 /* PushNotificationPayload.apns */,
 			);
 			path = "watchOS-heartrate WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E3782F0B2465AD5900F0D996 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3782F0C2465AD5900F0D996 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,8 +417,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "watchOS-heartrate WatchKit Extension/watchOS-heartrate WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "watchOS-heartrate WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,8 +440,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "watchOS-heartrate WatchKit Extension/watchOS-heartrate WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "watchOS-heartrate WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +465,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = watchOS_heartrate_WatchKit_Extension;
 				INFOPLIST_FILE = "watchOS-heartrate WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.watchOS-heartrate.watchkitapp";
@@ -468,7 +484,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = watchOS_heartrate_WatchKit_Extension;
 				INFOPLIST_FILE = "watchOS-heartrate WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.watchOS-heartrate.watchkitapp";
@@ -486,7 +502,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.watchOS-heartrate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,7 +515,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.watchOS-heartrate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
